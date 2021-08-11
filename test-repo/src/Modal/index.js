@@ -1,7 +1,7 @@
 // Module Imports
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { node, func, string, object } from 'prop-types'
+import { node, func, string, object, bool } from 'prop-types'
 
 // Style Imports
 import { ModalWrapperContainer, ModalContent, Overlay } from './style'
@@ -47,7 +47,8 @@ Modal.defaultProps = {
   height: '',
   width: '',
   position: 'top',
-  customStyle: {}
+  customStyle: {},
+  isOpen: false
 }
 
 Modal.propTypes = {
@@ -56,7 +57,8 @@ Modal.propTypes = {
   height: string,
   width: string,
   position: string,
-  customStyle: object
+  customStyle: object,
+  isOpen: bool
 }
 
 export default Modal

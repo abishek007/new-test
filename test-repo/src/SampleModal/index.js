@@ -19,7 +19,7 @@ const SampleModal = () => {
   // Uncommment the code for testing purpose gives clear view of modal opening in stack order
   /*
   const rand = () => {
-    return Math.round(Math.random() * 20) - 10;
+    return Math.round(Math.random() * 20); // returns random number 0 to 20
   }
   
   const getModalStyle = () => {
