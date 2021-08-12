@@ -1,23 +1,15 @@
 // Module Imports
 import React, { useState } from 'react'
-import Modal from '../Modal'
+import { Modal, ModalTitle, ModalContent, ModalFooter } from '../Modal'
 import { getModalStyle } from './helper'
 
 // Style Imports
-import {
-  ModalTitleWrapper,
-  ModalFooterWrapper,
-  ModalContentWrapper,
-  Button,
-  CloseBtn,
-  TitleText
-} from './style'
+import { Button, TitleText } from './style'
 
 // Constant Imports
 import {
   MODAL_TITLE,
   OPEN_BUTTON_TEXT,
-  CLOSE_BUTTON_TEXT,
   MODAL_HEIGHT,
   MODAL_WIDTH,
   MODAL_POSITION,
@@ -39,21 +31,6 @@ const SampleModal = () => {
     setIsRandomModalOpen(!isRandomModalOpen)
   }
 
-  const modalBody = (
-    <>
-      <ModalTitleWrapper>
-        <TitleText>{MODAL_TITLE}</TitleText>
-        <CloseBtn onClick={toggleModal} className="close-modal">
-          {CLOSE_BUTTON_TEXT}
-        </CloseBtn>
-      </ModalTitleWrapper>
-      <ModalContentWrapper>{MODAL_INFO}</ModalContentWrapper>
-      <ModalFooterWrapper>
-        <SampleModal />
-      </ModalFooterWrapper>
-    </>
-  )
-
   return (
     <>
       <Button onClick={toggleModal}>{OPEN_BUTTON_TEXT}</Button>
@@ -65,7 +42,11 @@ const SampleModal = () => {
         width={MODAL_WIDTH}
         position={MODAL_POSITION}
       >
-        {modalBody}
+        <ModalTitle handleClose={toggleModal}>
+          <TitleText>{MODAL_TITLE}</TitleText>
+        </ModalTitle>
+        <ModalContent>{MODAL_INFO}</ModalContent>
+        <ModalFooter><SampleModal /></ModalFooter>
       </Modal>
       <Modal
         isOpen={isRandomModalOpen}
@@ -75,7 +56,11 @@ const SampleModal = () => {
         position={MODAL_POSITION}
         customStyle={modalStyle}
       >
-        {modalBody}
+        <ModalTitle handleClose={toggleRandomModal}>
+          <TitleText>{MODAL_TITLE}</TitleText>
+        </ModalTitle>
+        <ModalContent>{MODAL_INFO}</ModalContent>
+        <ModalFooter><SampleModal /></ModalFooter>
       </Modal>
     </>
   )

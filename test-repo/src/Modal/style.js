@@ -4,7 +4,7 @@ import styled from "styled-components";
 // Common Styles Import
 import { centeredCss } from '../common/styles'
 
-export const ModalWrapperContainer = styled.div`
+export const ModalContainer = styled.div`
   background-color: ${({ theme }) => theme.GRAY};
   position: fixed;
   height: 100%;
@@ -25,7 +25,7 @@ export const Overlay = styled.div`
   position: fixed;
 `
 
-export const ModalContent = styled.div`
+export const ModalWrapper = styled.div`
   position: absolute;
   top:  ${({ position }) => position || '40%'};
   left: 50%;
@@ -37,4 +37,31 @@ export const ModalContent = styled.div`
   width: ${({ width }) => width || '600px'};
   overflow: auto;
   background-color: ${({ theme }) => theme.DIM_GRAY};
+`
+
+export const ModalTitleContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+`
+
+export const CloseBtn = styled.div`
+  color: ${({ theme }) => theme.BLACK};
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+`
+
+export const ModalFooterContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 8px;
+`
+
+export const ModalContentContainer = styled.div`
+    padding: 16px;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 `

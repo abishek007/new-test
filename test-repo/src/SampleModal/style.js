@@ -14,34 +14,8 @@ export const Button = styled.div`
   border-radius: 4px;
 `
 
-export const ModalTitleWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px;
-`
-
 export const TitleText = styled.div`
   font-size: 20px;
   font-weight: bold;
 `
 
-export const CloseBtn = styled.div`
-  color: ${({ theme }) => theme.BLACK};
-  cursor: pointer;
-  font-size: 20px;
-  font-weight: bold;
-`
-
-export const ModalFooterWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 8px;
-`
-
-export const ModalContentWrapper = styled.div`
-    padding: 16px;
-    border-top: 1px solid rgba(0, 0, 0, 0.12);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-`

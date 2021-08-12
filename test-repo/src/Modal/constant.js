@@ -8,3 +8,4 @@ export const MODAL_POSITIONS = {
 export const MODAL_PORTAL = "modal-portal"
 export const BODY = "body"
 export const BEFORE_END = "beforeend"
+export const CLOSE_BUTTON_TEXT = 'X'

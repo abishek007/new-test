@@ -2,7 +2,6 @@
 export const MODAL_TITLE = 'Hello React Modal'
 export const OPEN_BUTTON_TEXT = 'Open Normal Modal'
 export const OPEN_RANDOM_BUTTON_TEXT = 'Open Random Positioned Modal'
-export const CLOSE_BUTTON_TEXT = 'X'
 export const MODAL_HEIGHT = '250px'
 export const MODAL_WIDTH = '600px'
 export const MODAL_POSITION = 'top' // top, center, bottom
