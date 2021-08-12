@@ -1,19 +1,22 @@
 // Module Imports
 import SampleModal from '../SampleModal'
+import { ThemeProvider } from 'styled-components'
+import { theme } from '../common/theme'
 
 // Styles Import
 import { AppTitle, SampleModalWrapper } from './style'
 
-const APP_TITLE_TEXT = 'Simple modal component we can open multiple modals like (Stacked Modal) and are closed as LIFO (Last in first out) order'
+// Constant Imports
+import { APP_TITLE_TEXT } from './constant'
 
 const App = () => {
   return (
-    <div className="App">
-      <AppTitle>{APP_TITLE_TEXT}</AppTitle>
-      <SampleModalWrapper>
-        <SampleModal />
-      </SampleModalWrapper>
-    </div>
+    <ThemeProvider theme={theme}>
+        <AppTitle>{APP_TITLE_TEXT}</AppTitle>
+        <SampleModalWrapper>
+          <SampleModal />
+        </SampleModalWrapper>
+    </ThemeProvider>
   );
 }
 

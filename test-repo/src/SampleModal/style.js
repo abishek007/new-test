@@ -2,15 +2,15 @@
 import styled from "styled-components";
 
 export const Button = styled.div`
-  background-color: #4CAF50;
+  background-color: ${({ theme }) => theme.LIGHT_GREEN};
   border: none;
-  color: white;
-  padding: 10px 20px;
+  color: ${({ theme }) => theme.WHITE};
+  padding: 10px 8px;
   text-align: center;
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  max-width: 92px;
+  max-width: 235px;
 `
 
 export const ModalTitleWrapper = styled.div`
@@ -20,8 +20,13 @@ export const ModalTitleWrapper = styled.div`
 `
 
 export const CloseBtn = styled.div`
-  color: #000000;
+  color: ${({ theme }) => theme.BLACK};
   cursor: pointer;
   font-size: 20px;
   font-weight: bold;
+`
+
+export const ModalFooterWrapper = styled.div`
+  display: flex;
+  align-items: center;
 `

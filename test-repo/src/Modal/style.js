@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { centeredCss } from '../common/styles'
 
 export const ModalWrapperContainer = styled.div`
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: ${({ theme }) => theme.GRAY};
   position: fixed;
   height: 100%;
   width: 100%;
@@ -15,7 +15,7 @@ export const ModalWrapperContainer = styled.div`
 `
 
 export const Overlay = styled.div`
-  background-color: rgba(49, 49, 49, 0.8);
+  background-color: ${({ theme }) => theme.TRANSPARENT_BLACK};
   width: 100vw;
   height: 100vh;
   top: 0;
@@ -36,5 +36,5 @@ export const ModalContent = styled.div`
   height: ${({ height }) => height || '500px'};
   width: ${({ width }) => width || '600px'};
   overflow: auto;
-  background-color: #f1f1f1;
+  background-color: ${({ theme }) => theme.DIM_GRAY};
 `

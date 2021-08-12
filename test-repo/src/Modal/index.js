@@ -6,20 +6,16 @@ import { node, func, string, object, bool } from 'prop-types'
 // Style Imports
 import { ModalWrapperContainer, ModalContent, Overlay } from './style'
 
-// Constants
+// Constant Imports
+import { MODAL_PORTAL_ELEMENT, MODAL_POSITIONS, MODAL_PORTAL, BODY, BEFORE_END } from './constant'
+
 /* Used React Portals */
-const modalPortal = document.getElementById("modal-portal")
-const MODAL_PORTAL_ELEMENT = `<div id="modal-portal"></div>`
-const MODAL_POSITIONS = {
-  top: '40%',
-  center: '50%',
-  botton: '60%'
-}
+const modalPortal = document.getElementById(MODAL_PORTAL)
 
 if (!modalPortal) {
   document
-    .querySelector("body")
-    .insertAdjacentHTML("beforeend", MODAL_PORTAL_ELEMENT);
+    .querySelector(BODY)
+    .insertAdjacentHTML(BEFORE_END, MODAL_PORTAL_ELEMENT);
 }
 
 const Modal = ({ children, handleClose, height, width, position, customStyle, isOpen }) => {
@@ -36,7 +32,7 @@ const Modal = ({ children, handleClose, height, width, position, customStyle, is
         { children }
       </ModalContent>
     </ModalWrapperContainer>,
-    document.getElementById("modal-portal")
+    document.getElementById(MODAL_PORTAL)
   ))
 
 }
