@@ -4,7 +4,14 @@ import Modal from '../Modal'
 import { getModalStyle } from './helper'
 
 // Style Imports
-import { ModalTitleWrapper, ModalFooterWrapper, Button, CloseBtn } from './style'
+import {
+  ModalTitleWrapper,
+  ModalFooterWrapper,
+  ModalContentWrapper,
+  Button,
+  CloseBtn,
+  TitleText
+} from './style'
 
 // Constant Imports
 import {
@@ -35,12 +42,12 @@ const SampleModal = () => {
   const modalBody = (
     <>
       <ModalTitleWrapper>
-        <h2>{MODAL_TITLE}</h2>
+        <TitleText>{MODAL_TITLE}</TitleText>
         <CloseBtn onClick={toggleModal} className="close-modal">
           {CLOSE_BUTTON_TEXT}
         </CloseBtn>
       </ModalTitleWrapper>
-      <p>{MODAL_INFO}</p>
+      <ModalContentWrapper>{MODAL_INFO}</ModalContentWrapper>
       <ModalFooterWrapper>
         <SampleModal />
       </ModalFooterWrapper>
