@@ -1,9 +1,9 @@
 
 export const MODAL_PORTAL_ELEMENT = `<div id="modal-portal"></div>`
 export const MODAL_POSITIONS = {
-  top: '40%',
-  center: '50%',
-  botton: '60%'
+  top: '10%',
+  center: '30%',
+  botton: '50%'
 }
 export const MODAL_PORTAL = "modal-portal"
 export const BODY = "body"

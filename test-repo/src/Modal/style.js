@@ -1,9 +1,6 @@
 // Module Imports
 import styled from "styled-components";
 
-// Common Styles Import
-import { centeredCss } from '../common/styles'
-
 export const ModalContainer = styled.div`
   background-color: ${({ theme }) => theme.GRAY};
   position: fixed;
@@ -11,11 +8,11 @@ export const ModalContainer = styled.div`
   width: 100%;
   top: 0;
   left: 0;
-  ${centeredCss}
+  overflow-y: auto;
 `
 
 export const Overlay = styled.div`
-  background-color: ${({ theme }) => theme.TRANSPARENT_BLACK};
+  background-color: ${({ theme }) => theme.GRAY};
   width: 100vw;
   height: 100vh;
   top: 0;
@@ -26,17 +23,19 @@ export const Overlay = styled.div`
 `
 
 export const ModalWrapper = styled.div`
-  position: absolute;
-  top:  ${({ position }) => position || '40%'};
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: ${({ theme }) => theme.WHITE};
+  transform: translateX(-50%);
+  top:  ${({ position }) => position || '10%'};
   left: 50%;
-  border-radius: 3px;
-  padding: 14px 28px;
-  transform: translate(-50%, -50%);
-  line-height: 1.4;
-  height: ${({ height }) => height || '500px'};
+  height: ${({ height }) => height || 'auto'};
   width: ${({ width }) => width || '600px'};
   overflow: auto;
-  background-color: ${({ theme }) => theme.DIM_GRAY};
+  border-radius: 3px;
+  padding: 14px 28px;
+  line-height: 1.4;
 `
 
 export const ModalTitleContainer = styled.div`

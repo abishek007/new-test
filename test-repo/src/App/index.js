@@ -1,5 +1,6 @@
 // Module Imports
 import SampleModal from '../SampleModal'
+import LongContentModal from '../LongContentModal'
 import { ThemeProvider } from 'styled-components'
 import { theme } from '../common/theme'
 
@@ -15,6 +16,9 @@ const App = () => {
         <AppTitle>{APP_TITLE_TEXT}</AppTitle>
         <SampleModalWrapper>
           <SampleModal />
+        </SampleModalWrapper>
+        <SampleModalWrapper>
+          <LongContentModal />
         </SampleModalWrapper>
     </ThemeProvider>
   );

@@ -10,6 +10,7 @@ export const AppTitle = styled.p`
   margin: 20px auto;
   font-size: 18px;
   font-weight: bold;
+  margin-bottom: 5px;
 `
 
 export const SampleModalWrapper = styled.div`
@@ -18,5 +19,6 @@ export const SampleModalWrapper = styled.div`
   margin: 0 auto;
   width: 80%;
   border-radius: 4px;
+  margin-top: 15px;
   ${centeredCss}
 `
