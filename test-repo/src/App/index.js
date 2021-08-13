@@ -1,8 +1,8 @@
 // Module Imports
-import SampleModal from '../SampleModal'
+import StackedModal from '../StackedModal'
 import LongContentModal from '../LongContentModal'
 import { ThemeProvider } from 'styled-components'
-import { theme } from '../common/theme'
+import { theme } from '../Common/Styles/theme'
 
 // Styles Import
 import { AppTitle, SampleModalWrapper } from './style'
@@ -15,7 +15,7 @@ const App = () => {
     <ThemeProvider theme={theme}>
         <AppTitle>{APP_TITLE_TEXT}</AppTitle>
         <SampleModalWrapper>
-          <SampleModal />
+          <StackedModal />
         </SampleModalWrapper>
         <SampleModalWrapper>
           <LongContentModal />

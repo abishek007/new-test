@@ -2,9 +2,10 @@
 import React, { useState } from 'react'
 import { Modal, ModalTitle, ModalContent, ModalFooter } from '../Modal'
 import { getModalStyle } from './helper'
+import Button from '../Common/Components/Button'
 
 // Style Imports
-import { Button, TitleText } from './style'
+import { TitleText } from './style'
 
 // Constant Imports
 import {
@@ -17,7 +18,7 @@ import {
   OPEN_RANDOM_BUTTON_TEXT
 } from './constant'
 
-const SampleModal = () => {
+const StackedModal = () => {
 
   const [modalStyle] = useState(getModalStyle)
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -33,8 +34,8 @@ const SampleModal = () => {
 
   return (
     <>
-      <Button onClick={toggleModal}>{OPEN_BUTTON_TEXT}</Button>
-      <Button onClick={toggleRandomModal}>{OPEN_RANDOM_BUTTON_TEXT}</Button>
+      <Button handleClick={toggleModal}>{OPEN_BUTTON_TEXT}</Button>
+      <Button handleClick={toggleRandomModal}>{OPEN_RANDOM_BUTTON_TEXT}</Button>
       <Modal
         isOpen={isModalOpen}
         handleClose={toggleModal}
@@ -46,7 +47,7 @@ const SampleModal = () => {
           <TitleText>{MODAL_TITLE}</TitleText>
         </ModalTitle>
         <ModalContent>{MODAL_INFO}</ModalContent>
-        <ModalFooter><SampleModal /></ModalFooter>
+        <ModalFooter><StackedModal /></ModalFooter>
       </Modal>
       <Modal
         isOpen={isRandomModalOpen}
@@ -60,10 +61,10 @@ const SampleModal = () => {
           <TitleText>{MODAL_TITLE}</TitleText>
         </ModalTitle>
         <ModalContent>{MODAL_INFO}</ModalContent>
-        <ModalFooter><SampleModal /></ModalFooter>
+        <ModalFooter><StackedModal /></ModalFooter>
       </Modal>
     </>
   )
 }
 
-export default SampleModal
+export default StackedModal

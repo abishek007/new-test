@@ -2,7 +2,7 @@
 import styled from "styled-components";
 
 // Common Styles Import
-import { centeredCss } from '../common/styles'
+import { centeredCss } from '../Common/Styles/style'
 
 export const AppTitle = styled.p`
   width: 84%;

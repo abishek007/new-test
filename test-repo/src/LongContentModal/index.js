@@ -1,9 +1,10 @@
 // Module Imports
 import React, { useState } from 'react'
 import { Modal, ModalTitle, ModalContent, ModalFooter } from '../Modal'
+import Button from '../Common/Components/Button'
 
 // Style Imports
-import { Button, TitleText } from './style'
+import { TitleText } from './style'
 
 // Constant Imports
 import {
@@ -22,7 +23,7 @@ const LongContentModal = () => {
 
   return (
     <>
-      <Button onClick={toggleModal}>{OPEN_BUTTON_TEXT}</Button>
+      <Button handleClick={toggleModal}>{OPEN_BUTTON_TEXT}</Button>
       <Modal
         isOpen={isModalOpen}
         handleClose={toggleModal}
@@ -32,7 +33,7 @@ const LongContentModal = () => {
         </ModalTitle>
         <ModalContent>{MODAL_INFO}</ModalContent>
         <ModalFooter>
-          <Button onClick={toggleModal}>Cancel</Button>
+          <Button handleClick={toggleModal}>Cancel</Button>
         </ModalFooter>
       </Modal>
     </>

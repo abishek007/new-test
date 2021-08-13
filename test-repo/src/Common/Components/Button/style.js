@@ -1,7 +1,7 @@
 // Module Imports
 import styled from "styled-components";
 
-export const Button = styled.div`
+export const ButtonWrapper = styled.div`
   background-color: ${({ theme }) => theme.LIGHT_GREEN};
   border: none;
   color: ${({ theme }) => theme.WHITE};
@@ -13,9 +13,3 @@ export const Button = styled.div`
   font-weight: bold;
   border-radius: 4px;
 `
-
-export const TitleText = styled.div`
-  font-size: 20px;
-  font-weight: bold;
-`
-
