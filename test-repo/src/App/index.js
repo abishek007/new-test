@@ -10,6 +10,10 @@ import { AppTitle, SampleModalWrapper } from './style'
 // Constant Imports
 import { APP_TITLE_TEXT } from './constant'
 
+/**
+ * @description App allow's to view the StackedModal and LongContentModal
+ */
+
 const App = () => {
   return (
     <ThemeProvider theme={theme}>
