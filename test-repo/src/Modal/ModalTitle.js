@@ -8,6 +8,10 @@ import { ModalTitleContainer, CloseBtn } from './style'
 // Constant Imports
 import { CLOSE_BUTTON_TEXT } from './constant'
 
+/**
+ * @description ModalTitle used to pass title of Modal and it has close button with it to close Modal 
+ */
+
 const ModalTitle = ({ children, handleClose }) => (
   <ModalTitleContainer>
     {children}

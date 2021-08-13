@@ -5,6 +5,10 @@ import { node } from 'prop-types'
 // Style Imports
 import { ModalContentContainer } from './style'
 
+/**
+ * @description ModalContent used to pass content(body) of Modal
+ */
+
 const ModalContent = ({ children }) => (
   <ModalContentContainer>{children}</ModalContentContainer>
 )

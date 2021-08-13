@@ -5,6 +5,10 @@ import { node, func, object } from 'prop-types'
 // Style Imports
 import { ButtonWrapper } from './style'
 
+/**
+ * @description Button used in LongContentModal, StackedModal Components 
+ */
+
 const Button = ({ children, handleClick, customStyles }) => (
   <ButtonWrapper
     style={customStyles}

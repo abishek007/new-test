@@ -18,6 +18,10 @@ if (!modalPortal) {
     .insertAdjacentHTML(BEFORE_END, MODAL_PORTAL_ELEMENT);
 }
 
+/**
+ * @description Modal used for creating Dialogs
+ */
+
 const Modal = ({ children, handleClose, height, width, position, customStyle, isOpen }) => {
 
   return isOpen && (ReactDOM.createPortal(

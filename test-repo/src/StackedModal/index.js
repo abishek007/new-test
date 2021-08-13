@@ -18,6 +18,10 @@ import {
   OPEN_RANDOM_BUTTON_TEXT
 } from './constant'
 
+/**
+ * @description StackedModal shows the Modal Component opening in the stacked order and closes as LIFO(Last In First Out) order 
+ */
+
 const StackedModal = () => {
 
   const [modalStyle] = useState(getModalStyle)

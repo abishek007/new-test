@@ -13,6 +13,10 @@ import {
   MODAL_INFO
 } from './constant'
 
+/**
+ * @description LongContentModal shows the Modal Component is flexible for long paragraph 
+ */
+
 const LongContentModal = () => {
 
   const [isModalOpen, setIsModalOpen] = useState(false)
