@@ -2,6 +2,10 @@
 
 This project shows an easy and simple way to use **Modal** in react. and This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Installation
+
+`npm install`
+
 ## Features of Modal
   - Resize the Modal
   - Flexible for Long Content 
